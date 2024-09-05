@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankNotificationsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/default_margin">
+
+        <!-- Section pour le bouton de téléchargement et l'aperçu de l'image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_cook_page_upload_button"
+                android:background="@color/green"
+                android:textColor="@color/darkGray"
+                android:padding="@dimen/default_margin"
+                style="@style/titleTextStyle"/>
+
+            <ImageView
+                android:id="@+id/preview_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/trending2"/>
+        </LinearLayout>
+
+        <!-- Champ pour l'entrée du nom de la recette -->
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:hint="@string/add_cook_page_name_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"
+            style="@style/DefaultTextStyle"/>
+
+        <!-- Champ pour la description de la recette -->
+        <EditText
+            android:id="@+id/description_input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:hint="@string/add_cook_page_description_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"
+            style="@style/DefaultTextStyle"/>
+
+
+        <!-- Champ pour la durée de préparation -->
+        <EditText
+            android:id="@+id/duration_input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:hint="@string/add_cook_page_duration_input"
+            android:inputType="number"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"
+            style="@style/DefaultTextStyle"/>
+
+        <!-- Spinner pour la difficulté -->
+        <Spinner
+            android:id="@+id/difficulty_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:entries="@array/add_cook_page_difficulte_spinner_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin" />
+
+        <!-- Spinner pour le temps -->
+        <Spinner
+            android:id="@+id/time_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:entries="@array/add_cook_page_time_spinner_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"/>
+
+        <!-- Bouton pour choisir les ingrédients -->
+        <Button
+            android:id="@+id/select_ingredients_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="@string/add_cook_page_select_ingredients_button"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:padding="@dimen/default_margin"/>
+
+        <!-- Champ pour afficher les ingrédients sélectionnés -->
+        <TextView
+            android:id="@+id/ingredients_input"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:hint="@string/add_cook_page_ingredients_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:gravity="top"/>
+
+        <!-- Champ pour les étapes de préparation -->
+        <EditText
+            android:id="@+id/steps_input"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:hint="@string/add_cook_page_steps_input"
+            android:paddingStart="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:gravity="top"/>
+
+        <!-- Bouton de confirmation -->
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:layout_marginTop="@dimen/item_margin"
+            android:background="@color/darkGray"
+            android:text="@string/add_cook_page_confirme_button"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>
